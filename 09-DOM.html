@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOM</title>
+
+</head>
+
+<body>
+  <p>
+    Document Object Moddel
+    <!--
+    -Document Objects represents/models the webpage
+    -Combines HTML and Javascript together
+    
+    -->
+  </p>
+
+  <button>
+    hello
+  </button>
+
+  <button class="js-button">
+    Second Button
+  </button>
+
+  <script>
+    console.log(document.querySelector('button').innerHTML);
+    //lets us get any element from the page and put it inside Javascript
+
+    document.querySelector('button')
+      .innerHTML = 'changed';
+    //This will change the content of the inside of the button.
+
+    const buttonElement = document.querySelector('.js-button')
+      .innerHTML = 'Ako Buduy';
+    //access 2nd button. Class Selector is when using dot at the beginning of class. 
+    //Usually end the name with Element to know that there's an html elemnt inside variable.
+    console.log(buttonElement);
+
+
+
+
+
+
+    /*
+    console.log(document.title);
+    document.title = 'Changed';
+    //changes the title of the webpage
+
+    console.log(document.body);
+    //When we have an html elemnt inside the Javascript the HTML is converted into Javascript
+
+    console.log(typeof document.body);
+  
+
+    console.log(document.body.innerHTML);
+    //Control all the HTML inside the body
+
+    document.body.innerHTML = '<button>Good Job!</button>';
+    //replace html code inside the body
+
+
+*/
+    /*
+    document.body.innerHTML = 'hello'; //This syntax uses a Dot Notation and works just as any objects. Just like what we've learned in Objects.
+
+    document.title = 'good job!';
+*/
+
+
+
+  </script>
+  <!--
+-Every HTML element has a property(.innerHtml)
+-->
+</body>
+
+</html>

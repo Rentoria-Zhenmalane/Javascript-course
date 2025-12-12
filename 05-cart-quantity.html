@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cart Quantity</title>
+
+</head>
+
+<body>
+  <p>Cart Quantity</p>
+  <button onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Show quantity</button>
+  <!-- 
+  onclick attribute (html attribute) is used to add a click event to the button using Javascript.
+   -->
+  <button onclick="
+    cartQuantity ++;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  /* Updates the value based on its current value. It's not a loop but an event, means the action only takes place when you click the button.*/
+  ">
+    Add to cart</button>
+
+  <button onclick="
+    cartQuantity += 2;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">+2</button>
+
+  <button onclick="
+    cartQuantity += 3;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+3</button>
+
+  <button onclick="
+    console.log('Cart was reset');
+    cartQuantity = 0;
+    console.log(`Cart Quantity: ${cartQuantity}`) 
+  ">Reset Cart</button>
+
+  <button onclick="
+    cartQuantity += 4;
+    console.log(`Cart Quantity: ${cartQuantity}`)
+  ">
+    +4
+  </button>
+
+  <button onclick="
+    cartQuantity += 5;
+    console.log(`Cart Quantity: ${cartQuantity}`)
+  ">
+    +5
+  </button>
+
+  <button onclick="
+    cartQuantity --;
+    console.log(`Cart Quantity: ${cartQuantity}`)
+  ">
+    Remove from cart
+  </button>
+
+  <script>
+    let cartQuantity = 0;
+  </script>
+
+</body>
+
+</html>

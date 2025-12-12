@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Objects</title>
+
+</head>
+
+<body>
+  <script>
+    // An objects groups multiple values together
+    //code on the left(name, price) is called PROPERTY. Code on the right(socks,1090) is called VALUES. Together they are called PROPERTY-VALUE PAIR.
+
+    //Objects are used to oraganize codes. instead of using bunch of variables, you can just use Objects to group them to categorize.
+    /*const product = {
+      name: 'socks',
+      price: 1090
+    };
+    console.log(product);
+    console.log(product.name); //this is called Dot-Notation
+    console.log(product.price);
+
+    product.name = 'cotton socks';//can change product associated with name
+    console.log(product);
+
+    product.newProperty = true;
+    console.log(product);
+
+    delete product.newProperty;
+    console.log(product); // delete VALUE from PROPERTY
+
+    */
+
+/*
+    const product2 = {
+      name: 'shirt',
+      ['delivery-time']: '1 day', //Can also use BRACKET NOTATION to add another property. (Can still work even without the bracket.)
+      rating: {
+        stars: 4.5,
+        count: 87
+      },
+      fun: function function1() {
+        console.log('function inside object') //function inside an object is called Method
+      }
+    }
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name'])//BRACKET NOTATION - Another way to access value inside an object.
+    console.log(product2['delivery-time']); //let us use properties that don't work normally with dot notation.
+
+    console.log(product2.rating.stars);
+    product2.fun();
+
+    console.log(typeof console.log);
+
+    console.log(JSON.stringify(product2)); //convert Javascript Object --> //JSON
+
+    //const jsonString = JSON.stringify(product2) //
+    //console.log(JSON.parse(jsonString))
+    //convert JSON ---> Javascript
+    */
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    //simple strings can also have a properties and method.
+    //how can string have properties and methods? the answer is Auto-Boxing.
+    //Auto-Boxing doesn't work with undefined and null.
+
+    const object1 = {
+      message: 'hello'
+    };
+    const object2 = object1;
+
+    object1.message = 'goodjob!';
+    console.log(object1);
+    console.log(object2);
+    //objects is a reference
+    //can change value inside an object even if using const
+
+    const object3 = {
+      message: 'goodjob!'
+    };
+
+    console.log(object3 === object1);
+    //Objects cannot be compared. This is because the two objects may have the same value, they still differ in reference. So it returns false
+
+    console.log(object2 === object1);
+    //In this case it returns true because they point on the same reference.
+
+    const object4 = {
+      message: 'goodjob!',
+      price: 799
+    };
+    //const message = object4.message;
+    const { message, price } = object4;//Destructuring - easier way to take properties out of the object. This is the same as the code above.
+    console.log(message);
+    console.log(price);
+
+    const object5 = {
+      //message: message
+      //message,
+      //a shortcut called shorthand property. Usually use if your poperty and value have the same name.
+
+      //method: function function1() {
+      //console.log('method')
+      //}
+
+      method() {
+        console.log('method')
+        //Method is a function(log()) saved inside an object(console).
+      }
+    };
+
+
+    console.log(object5);
+    object5.method();
+    //run the function
+
+
+
+  </script>
+
+</body>
+
+<!--
+-console.log() and Math.random() are actually called as Method (Object + Function)
+
+-JSON is a built-in objects that has more universal syntax rather than Javascript. We use JSON when we share data between 2 computers that might use different language. 
+
+-LocalStorage - another built-in object
+
+-JSON(Javascript Object Notation)
+
+-JSON Object helps us convert Javascript Object into JSON
+
+
+UP NEXT DOM !!!
+-->
+
+
+</html>
