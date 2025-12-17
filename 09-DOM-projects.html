@@ -40,9 +40,16 @@
     //Example of type coercion, not recommended to use in math because addition works differently.
     console.log('25' + 5);
 
+    /*
+    -Window is a built-in feature in Javascript, it's everything you see in the browser.
+    -We don't have to use window. everytime we use a document, console, alert, etc. because Javascript does it in the background:
+
     window.document
     window.console.log('window');
+    window.alert
 
+    but it's nice to know how it works in the background.
+*/
 
     document.querySelector('.js-costInput')
       .addEventListener('keydown', handleCostKeyDown);
