@@ -4,6 +4,10 @@
 <head>
   <title>DOM Projects</title>
   <style>
+    body {
+      font-family: Arial;
+    }
+
     .subscribe-button {
       background-color: black;
       border: none;
@@ -11,6 +15,7 @@
       padding: 10px;
       padding-left: 15px;
       padding-right: 15px;
+      margin-bottom: 30px;
       font-weight: bold;
       border-radius: 20px;
       cursor: pointer;
@@ -19,8 +24,22 @@
     }
 
     .is-subscribe {
-      background-color: gray;
+      background-color: rgb(232, 231, 231);
       color: black;
+    }
+
+    .cost-input {
+      font-size: 15px;
+      padding: 10px;
+    }
+
+    .calculate-button {
+      font-size: 15px;
+      padding: 11px 17px;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -43,7 +62,7 @@
 
   <p>Amazon Shipping Calculator</p>
 
-  <input placeholder="Cost of order" class="js-costInput">
+  <input placeholder="Cost of order" class="js-costInput cost-input">
   <!-- 
   -Cost of order does not stored as HTML, it's stored as value.
   -onkeydown="console.log('typing');"" let us see if someone is typing in the console.
@@ -51,7 +70,7 @@
   -onkeydown="handleCostKeyDown()" - not practical because you have to manually pass events.
   -->
 
-  <button onclick="calculateTotal()
+  <button class="calculate-button" onclick="calculateTotal()
   ">Calculate</button>
 
   <p class="js-totalCost"></p>
@@ -120,6 +139,7 @@
         //adds class inside an element.
       } else {
         buttonElement.innerHTML = 'Subscribe';
+        buttonElement.classList.remove('is-subscribe');
       }
     }
 
