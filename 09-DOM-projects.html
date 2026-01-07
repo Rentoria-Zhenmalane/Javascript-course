@@ -23,6 +23,7 @@
 
   <input placeholder="Cost of order" class="js-costInput">
   <!-- 
+
   -Cost of order does not stored as HTML, it's stored as value.
   -onkeydown="console.log('typing');"" let us see if someone is typing in the console.
   - onkeydown is an Object provided by Javascript
@@ -36,6 +37,8 @@
 
 
   <script>
+    console.log(typeof document.body); // Whenever we put html inside the Javascript, it's converted into object
+
     String(25) // converts number into string
     //Example of type coercion, not recommended to use in math because addition works differently.
     console.log('25' + 5);
@@ -66,12 +69,13 @@
       }
       //Event Listener creates the event Object, but your function won’t receive it unless you accept it as a parameter. That's why you need to put parameter which is the (event)
       //event doesn't exist inside the function. So we need to put a parameter to put the event object inside the function. (Put a value inside a function)
-
+      //This function lets us calculate tota when pressing enter.
+     
     }
 
     function calculateTotal() {
-      const inputElement = document.querySelector('.js-costInput'); //get the input
-      //Whenever we geta value from DOM, the value will always be a string.
+      const inputElement = document.querySelector('.js-costInput'); //get the input and put it inside javascript
+      //Whenever we get a value from DOM, the value will always be a string.
       //A confirmation that we have the class.
       let cost = Number(inputElement.value); //Converts string valaue into number using Number() function.
       //Get the text inside the text box. 
@@ -90,7 +94,7 @@
 
     function subscribe() {
       const buttonElement = (document.querySelector('.js-subscribe-button'));
-      //Put the button inside Javascript
+      //Put the button inside Javascript and use it for logic.
 
       if (buttonElement.innerText === 'Subscribe') {
         buttonElement.innerHTML = 'Subscribed';
@@ -104,7 +108,18 @@
     -Inline events only allow one handler per event.
     - Document Object represents the webpage.
     -Window object represents the browser.
-    */
+
+    document.body.innerhtml = 'hello'  --> removes everything in the page and replaces it with hello
+
+    document.title = 'Good Job!' -- > changes the title into Good Job!
+
+      //document also has properties and methods
+
+    - //console.log(event); -->  lets us see bunch of information about an element or class.
+
+    - //console.log(event.key) --> shows us what key we pressed on keyboard. Key is one of the bunch of informations inside an element that we can see when we use event. 
+
+      */
   </script>
 
 </body>

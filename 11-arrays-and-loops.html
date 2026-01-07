@@ -8,7 +8,7 @@
 <body>
 
   <script>
-    const myArray = [10, 20, 30]; //USe square brackets for arrays.
+    const myArray = [10, 20, 30]; //Use square brackets for arrays.
     console.log(myArray);
 
     console.log(myArray[1]); //Gets the position in an array. Also  called index(represents the position of a value in an array).
@@ -26,6 +26,13 @@
     //because arrays are objects, they also have properties and methods. One useful property is .length
 
     console.log(myArray.length); //tells us how many values are in the array
+
+    myArray.push(100);
+    console.log(myArray);
+    //adds a value into an array
+
+    myArray.splice(0, 1); //takes 2 numbers. 1st number is the starting index you want to remove, Next number is the number of values you want to remove.
+    console.log(myArray);
   </script>
 
 </body>
