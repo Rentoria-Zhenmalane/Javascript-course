@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Advanced Functions</title>
+</head>
+
+<body>
+
+  <script>
+/*
+    function greeting() {
+      console.log('hello');
+    }
+    greeting(); //calling the function
+    //functions are also values like numbers, string, booleans, that means we can also save it inside a variable.
+
+    //We can save a function inside a variable
+    const num = 2;
+    const function1 = function greeting() {
+      console.log('hello2');
+    }
+
+    console.log(function1);//prints the function in console
+    console.log(typeof function1);//get the type of function
+    function1(); //because a function is stored inside a varibale, you can just call it like that
+
+    const object1 = {
+      num: 2,
+      fun: function greeting() {
+        console.log('hello3');
+      }
+      //Because function is also a value that means we can also save function inside an object
+      //This is also called a method(function saved inside an object).
+    }
+
+    object1.fun(); //We can call function like this inside an object.
+    //And because fun is a function, we can just call it like that.
+
+    function display(param) {
+      console.log(param);
+    }
+    display(2);
+    //This is called passing a value into function. Means that the 2 in display(2) passes it into display(param) --> display(2).
+
+      //function run(param) {
+      param();
+    }
+    run(function () {
+      //console.log('hello4');
+    });
+    //This is passing a function into a function 
+    //the function we are passing it is called a callback function
+    //“Why do we pass behavior as data?”
+    //JavaScript allows this because functions are first-class values.
+
+*/
+    /*
+    const function1 = function() {
+      console.log('hello2');
+    }
+      this is called as anonymous function, means a function wihtout a name
+   */
+
+
+    /*
+     IMPORTANT NOTES:
+      Functions are values.
+        That means:
+        You can store them in variables
+        You can pass them as arguments
+        You can call them later
+
+     -Advantage of using function is called Hoisting, so we don't need to worry what order is our code
+ 
+     -Hoisting doesn't work when we save function in a variable
+ 
+     - what else can we do with a value? We can save it in an Object.
+
+     Rule of thumb (memorize this)
+      If the function answers “what happens here?” → anonymous
+      If the function answers “what is this?” → named
+
+      */
+
+    /*
+        setTimeout(function () { //this is also called as Asynchronous code
+          console.log('timeout');
+        }, 3000);
+        //setTimeout() is a built-in function. It takes 2 parameter : 1. A function to run in the future, 2. How long to wait before running this function(number in ms).
+        console.log('next line');
+    
+    
+        setInterval(function () {
+          console.log('interval');
+        }, 3000);
+        console.log('next line')
+        //setInterval is just like setTimeout exept this time it will run every 3s.
+        */
+
+    /*
+        [
+          'make dinner',
+          'wash dishes',
+          'watch youtube'
+        ].forEach(function (value, index) { //Values from the array are saved in a variable called value. Can have two parameters.
+          if (value === "wash dishes") {
+            return; // this works the same as continue.
+          }
+    
+          console.log(index);
+          console.log(value);
+        });
+    
+        //Not easy to use break in forEach loop, so if you need to exit a loop early, better to use for loop.
+        //forEach statement doesn't have continue, can use return instead.
+        //this is a method that allows us to loop through an array
+    */
+
+    const arrowFunction = (param, param1) => { // can 2 parameters.
+      console.log('hello');
+      return 5;
+    };
+    arrowFunction();
+    //shorter version of the function below.
+
+    function regularFunction() {
+      console.log('hello');
+    };
+    regularFunction();
+
+
+    const oneParam = param => { //If there is only 1 parameter, parenthesis can be optional. 
+      console.log(param + 1);
+    }
+    oneParam(2);
+
+    const oneLine = () => 2 + 3;
+    console.log(oneLine()); // called one line function. If your code is short and can be written in one line then curly brackets is not needed. It also automatically returns result.
+
+
+
+  </script>
+
+</body>
+
+</html>
