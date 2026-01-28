@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>this demo</title>
+</head>
+
+<body>
+  <button id="regular">Regular Function</button>
+  <button id="arrow">Arrow Function</button>
+
+  <script>
+    const regularBtn = document.getElementById('regular');
+    const arrowBtn = document.getElementById('arrow');
+
+    // ✅ Regular function: "this" is set to the button element
+    regularBtn.addEventListener('click', function () {
+      console.log('Regular function this:', this);
+      this.style.backgroundColor = 'lightgreen'; // works!
+    });
+
+    // ⚠️ Arrow function: "this" is inherited from outer scope (window/undefined)
+    arrowBtn.addEventListener('click', () => {
+      console.log('Arrow function this:', this);
+      // this.style.backgroundColor = 'lightblue'; // ❌ error, because "this" is not the button
+    });
+
+    var x = 10;
+    console.log(x);
+
+    /* 
+    global object is the “root” object that holds all globally available variables, functions, and built‑ins. In browsers it’s window, in Node it’s global, and universally it’s globalThis.
+
+
+    var and function declarations attach to the global object.
+
+    let and const don’t.
+
+    Use globalThis if you want a safe, cross‑environment reference to the global object.
+    */
+
+    let b = 20;
+    console.log(b);
+
+  </script>
+</body>
+
+</html>

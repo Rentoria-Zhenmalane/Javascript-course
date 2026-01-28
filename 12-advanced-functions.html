@@ -7,7 +7,32 @@
 
 <body>
 
+  <button onclick="" class="js-button">
+    click
+  </button>
+
   <script>
+    /*
+    const buttonElement = document.querySelector(".js-button"); //every html element has a method called addEventListener(). Let us run some code when we interact with the element
+
+    const eventListener = () => {
+      console.log('click');
+    }
+
+    buttonElement.addEventListener('click', () => {
+
+    });
+
+
+    buttonElement.addEventListener('click', () => {
+      console.log('click2');
+    });
+
+   //takes two parameter: 1. Event or what type of interaction we want to listen to
+   //Can make multiple event listener
+   //Why not console.log it directly? Because it will execute immediately without the click.
+   */
+
 /*
     function greeting() {
       console.log('hello');
@@ -116,29 +141,64 @@
         //forEach statement doesn't have continue, can use return instead.
         //this is a method that allows us to loop through an array
     */
+    /*
+        const arrowFunction = (param, param1) => { // can 2 parameters.
+          console.log('hello');
+          return 5;
+        };
+        arrowFunction();
+        //shorter version of the function below.
+    
+        function regularFunction() {
+          console.log('hello');
+        };
+        regularFunction();
+    
+    
+        const oneParam = param => { //If there is only 1 parameter, parenthesis can be optional. 
+          console.log(param + 1);
+        }
+        oneParam(2);
+    
+        const oneLine = () => 2 + 3;
+        console.log(oneLine()); // called one line function. If your code is short and can be written in one line then curly brackets is not needed. It also automatically returns result.
+    
+        const object2 = {
+          method: () => {
+    
+          },
+    
+          method(){
+            //Called a shorthand method, much preferred method than arrow function when storing a function inside an object.
+          }
+        }
+    
+    */
 
-    const arrowFunction = (param, param1) => { // can 2 parameters.
-      console.log('hello');
-      return 5;
-    };
-    arrowFunction();
-    //shorter version of the function below.
+    console.log([1, -3, 5].filter((value, index) => {
 
-    function regularFunction() {
-      console.log('hello');
-    };
-    regularFunction();
+      /*if (value >= 0) { return true; }
+      else {
+        return false;
+      }
+      */
+      return value >= 0; //short way of above
+      //returns true if it's >= 0 otherwise it's false
 
+    }));
 
-    const oneParam = param => { //If there is only 1 parameter, parenthesis can be optional. 
-      console.log(param + 1);
-    }
-    oneParam(2);
+    console.log([1, 1, 3].map((value, index) => {
 
-    const oneLine = () => 2 + 3;
-    console.log(oneLine()); // called one line function. If your code is short and can be written in one line then curly brackets is not needed. It also automatically returns result.
+      if (value === 1) {
+        return value * 3
+      }
+      else {
+        return value
+      }
+      //tranform array into another array
+    }));
 
-
+    console.log([1, 1, 3].map(value => value * 2));
 
   </script>
 
